@@ -1,0 +1,37 @@
+1. zamowienia(id_produktu, nazwa_produktu, id_klienta, nazwa_klienta, 
+data_zamowienia, cena_produktu, ilosc, VAT, suma_brutto, suma_netto)
+
+zależności funkcyjne:
+a) nazwa_produktu -> VAT
+b) suma_netto, VAT -> suma_brutto
+c) nazwa_kienta, id_produktu, data_zamowienia -> ilosc
+d) id_produktu -> nazwa_produktu, cena_produktu, VAT
+e) id_klienta -> nazwa_klienta
+
+2. klucze kandydujące:
+
+proste:
+id_produktu
+id_klienta
+nazwa_klienta
+nazwa_produktu
+
+złożone:
+id_klienta, id_produktu, data_zamowienia
+
+3. pomieszczenia(id_pomieszczenia, numer_pomieszczenia, id_budynku,
+powierzchnia, liczba_okien, liczba_drzwi, ulica, miasto, kod_pocztowy) 
+
+zależności funkcyjne:
+a) id_pomieszczenia -> numer_pomieszczenia, id_budynku, powieszchnia, liczba_okien, liczba_drzwi
+b) id_budynku -> ulica, miasto
+c) kod_pocztowy -> miasto
+
+4. klucze kandydujące
+
+proste:
+id_pomieszczenia
+id_budynku
+
+złożone:
+id_pomieszczenia, id_budynku
